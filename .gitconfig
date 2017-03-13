@@ -1,3 +1,11 @@
 [user]
-	email = Joyce Wang
+	email = joyce.wang@data61.csiro.au
 	name = Joyce Wang
+
+[diff]
+ 	tool = meld
+	algorithm = patience
+
+[merge]
+	tool = meld
+	conflictstyle = diff3
