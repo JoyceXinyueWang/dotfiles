@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.tools:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/joyce/.oh-my-zsh
@@ -84,7 +84,8 @@ export ARCHFLAGS="-arch x86_64"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export EDITOR=/usr/bin/nano
+export TERM=xterm-256color # or screen-256color
+export EDITOR=/usr/bin/nvim
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUAL_ENV_DISABLE_PROMPT=true
@@ -100,10 +101,12 @@ alias listfonts="fc-list | sed 's,:.*,,' | sort -u"
 alias fontinfo="otfinfo -f"
 # pacman/pacaur
 alias pacall="LC_ALL=C pacman -Qi | sed -n '/^Name[^:]*: \(.*\)/{s//\1 /;x};/^Installed[^:]*: \(.*\)/{s//\1/;H;x;s/\n//;p}' | sort -nk2 | column -t"
-alias pacupg='pacaur -Syu' # Synchronize with repositories before upgrading packages that are out of date on the local system.
+alias pacupg='pacaur -Syu --noconfirm' # Synchronize with repositories before upgrading packages that are out of date on the local system.
 alias pacin='pacaur -S' # Install specific package(s) from the repositories
 alias pacre='pacaur -R' # Remove the specified package(s), retaining its configuration(s) and required dependencies
 alias pacrem='pacaur -Rns' # Remove the specified package(s), its configuration(s) and unneeded dependencies
 alias pacinf='pacaur -Si' # Display information about a given package in the repositories
 alias pacs='pacaur -Ss' # Search for package(s) in the repositories
 alias pacfiles='pacaur -Ql' # list the files from a certain pacagke
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -10,4 +10,6 @@
 	tool = meld
 	conflictstyle = diff3
 [core]
-	editor = atom --wait
+	editor = nvim
+[github]
+	user = JoyceXinyueWang
