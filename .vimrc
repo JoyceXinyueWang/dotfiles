@@ -51,7 +51,6 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'oblitum/rainbow'
-Plug 'rafi/awesome-vim-colorschemes'  " Many colourschemes
 
 " Etc
 " ---
@@ -61,6 +60,7 @@ Plug 'tpope/vim-repeat' "enables repeats on tpopes plugins
 Plug 'AndrewRadev/splitjoin.vim' "1 line ifs / multiline ifs
 Plug 'sjl/gundo.vim'
 Plug 'chrisbra/vim-diff-enhanced'
+Plug 'neovimhaskell/haskell-vim'
 
 call plug#end()
 " }}}
@@ -146,6 +146,9 @@ set wrap
 "}}}
 
 
+"Haskell
+let g:haskell_classic_highlighting = 1
+
 " ==== Display ==== {{{
 set termguicolors
 set number
@@ -163,6 +166,10 @@ set cursorline
 set colorcolumn=+1
 set laststatus=2
 
+let g:jellybeans_overrides = {
+\    'background': { 'guibg': '3f3f3f' },
+\}
+
 " Visual Appearance
 set guifont=Anonymous\ Pro\ for\ Powerline\ 10
 
@@ -178,7 +185,7 @@ if !has('nvim')
 endif
 
 " colorscheme jellybeans
-colorscheme seoul256
+colorscheme jellybeans
 if has('gui_running')
     set guioptions-=T   " Get rid of toolbar "
     set guioptions-=m   " Get rid of menu    "
