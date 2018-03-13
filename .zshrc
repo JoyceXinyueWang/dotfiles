@@ -99,14 +99,14 @@ alias openports="netstat --all --numeric --programs --inet --inet6"
 alias ison="ps -A | grep $1"
 alias listfonts="fc-list | sed 's,:.*,,' | sort -u"
 alias fontinfo="otfinfo -f"
-# pacman/pacaur
+# pacman/yay
 alias pacall="LC_ALL=C pacman -Qi | sed -n '/^Name[^:]*: \(.*\)/{s//\1 /;x};/^Installed[^:]*: \(.*\)/{s//\1/;H;x;s/\n//;p}' | sort -nk2 | column -t"
-alias pacupg='pacaur -Syu --noconfirm' # Synchronize with repositories before upgrading packages that are out of date on the local system.
-alias pacin='pacaur -S' # Install specific package(s) from the repositories
-alias pacre='pacaur -R' # Remove the specified package(s), retaining its configuration(s) and required dependencies
-alias pacrem='pacaur -Rns' # Remove the specified package(s), its configuration(s) and unneeded dependencies
-alias pacinf='pacaur -Si' # Display information about a given package in the repositories
-alias pacs='pacaur -Ss' # Search for package(s) in the repositories
-alias pacfiles='pacaur -Ql' # list the files from a certain pacagke
+alias pacupg='yay -Syu --noconfirm' # Synchronize with repositories before upgrading packages that are out of date on the local system.
+alias pacin='yay -S' # Install specific package(s) from the repositories
+alias pacre='yay -R' # Remove the specified package(s), retaining its configuration(s) and required dependencies
+alias pacrem='yay -Rns' # Remove the specified package(s), its configuration(s) and unneeded dependencies
+alias pacinf='yay -Si' # Display information about a given package in the repositories
+alias pacs='yay -Ss' # Search for package(s) in the repositories
+alias pacfiles='yay -Ql' # list the files from a certain pacagke
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
