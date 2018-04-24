@@ -403,6 +403,8 @@ set clipboard=unnamed,unnamedplus
 " Great for pasting Python lines into REPLs.
 nnoremap vv ^vg_
 
+nnoremap <C-x> oimport IPython<CR>IPython.embed()<CR><ESC>
+inoremap <C-x> import IPython<CR>IPython.embed()<CR>
 
 nnoremap <F4> :GundoToggle<CR>
 let g:gundo_width = 60
