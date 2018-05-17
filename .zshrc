@@ -108,5 +108,5 @@ alias pacrem='pacaur -Rns' # Remove the specified package(s), its configuration(
 alias pacinf='pacaur -Si' # Display information about a given package in the repositories
 alias pacs='pacaur -Ss' # Search for package(s) in the repositories
 alias pacfiles='pacaur -Ql' # list the files from a certain pacagke
-
+alias git-prune="git branch --merged >/tmp/merged-branches && vi /tmp/merged-branches && xargs git branch -d </tmp/merged-branches"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
