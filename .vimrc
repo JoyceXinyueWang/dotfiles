@@ -390,8 +390,13 @@ set autochdir
 nnoremap <leader>s :b#<CR>
 nnoremap <Leader>c :bd<CR>
 nnoremap <Leader>w :update<CR>
-nnoremap <silent> <leader>f :FzfFiles<CR>
+command! -bang -nargs=* FzfAu call fzf#vim#grep('rg --type py --no-heading --line-number .$ ~/code/', 0)
+command! -bang -nargs=* FzfProj call fzf#run({'source': 'lsproject', 'sink': 'e'})
+nnoremap <silent> <leader>n :FzfProj<CR>
 nnoremap <silent> <leader>b :FzfBuffers<CR>
+nnoremap <silent> <leader>a :FzfAu<CR>
+" nnoremap <silent> <leader>f :FzfFiles<CR>
+" nnoremap <silent> <leader>b :FzfBuffers<CR>
 
 " }}}
 
