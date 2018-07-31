@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.tools:/usr/local/bin:$PATH
+source $HOME/.nix-profile/etc/profile.d/nix.sh
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/joyce/.oh-my-zsh
